@@ -1,4 +1,6 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+
 namespace Bai3
 {
     internal class Program
@@ -8,29 +10,38 @@ namespace Bai3
             Console.WriteLine("MSV: 2415053122230");
             Console.WriteLine("Vo Van Phuong");
 
-            Console.WriteLine("Nhap n: "); 
-            int n = int.Parse(Console.ReadLine());
+            Console.Write("Nhap n: ");
+            int n;
 
-            List<int > danhsach = new List<int>();
+            while (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
+            {
+                Console.Write("Vui long nhap so nguyen hop le: ");
+            }
+
+            List<int> danhsach = new List<int>();
+
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine($"Nhap so thu {i + 1}: ");
-                danhsach.Add(int.Parse(Console.ReadLine()));
+                Console.Write($"Nhap so thu {i + 1}: ");
+                int so;
 
-            }
-            if (danhsach.Count > 0)
-            {
-                int max = danhsach[0];
-                for (int i = 1; i < n; i++)
+                while (!int.TryParse(Console.ReadLine(), out so))
                 {
-                    if (danhsach[i] > max)
-                        max = danhsach[i];
+                    Console.Write("Nhap lai so nguyen hop le: ");
                 }
-                Console.WriteLine("so lon nhat trong day so la: "+max);
+
+                danhsach.Add(so);
             }
-            else
-                Console.WriteLine("Danh sach trong");
-            
+
+            int max = danhsach[0];
+
+            foreach (int so in danhsach)
+            {
+                if (so > max)
+                    max = so;
+            }
+
+            Console.WriteLine("So lon nhat trong day la: " + max);
         }
     }
 }
