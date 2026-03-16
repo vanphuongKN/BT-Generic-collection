@@ -1,29 +1,47 @@
-﻿namespace Bai2
+﻿using System;
+using System.Collections.Generic;
+
+namespace Bai2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("MSV:2415053122230");
+            Console.WriteLine("MSV: 2415053122230");
             Console.WriteLine("Vo Van Phuong");
 
-            Console.WriteLine("nhap do dai day so: ");
-            int n = int .Parse(Console.ReadLine());
+            Console.Write("Nhap n: ");
+            int n;
 
-            List<int> danhsach = new List<int>();
-            Console.WriteLine("Nhap cac so nguyen");
-            for(int i= 0; i < n; i++)
+            while (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
             {
-                Console.WriteLine($"Nhap so {i+1}:  " );
-                danhsach.Add(int.Parse(Console.ReadLine()));
+                Console.Write("nhap so nguyen hop le: ");
             }
+
+            List<int> danhSach = new List<int>();
+
+            Console.WriteLine("Nhap cac so nguyen:");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write($"Nhap so {i + 1}: ");
+                int so;
+
+                while (!int.TryParse(Console.ReadLine(), out so))
+                {
+                    Console.Write("Nhap lai so nguyen: ");
+                }
+
+                danhSach.Add(so);
+            }
+
             int tong = 0;
-            for(int i= 0;i < n; i++)
-            {
-                tong = tong + danhsach[i];
 
+            foreach (int so in danhSach)
+            {
+                tong += so;
             }
-            Console.WriteLine("ket qua cua day so la: "+ tong);
+
+            Console.WriteLine("Tong cua day so la: " + tong);
         }
     }
 }
