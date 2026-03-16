@@ -12,38 +12,33 @@
             Console.WriteLine("MSV: 2415053122230");
             Console.WriteLine("Vo Van Phuong");
 
+            Console.Write("Nhap so sinh vien: ");
+            int n = int.Parse(Console.ReadLine());
             List<Student> danhsachsinhvien = new List<Student>();
-            Student sv1 = new Student();
-            sv1.Id = 1;
-            sv1.Name = "Vo Van Phuong";
-            danhsachsinhvien.Add(sv1);
+            for (int i = 0; i < n; i++)
+            {
+                Student sv = new Student();
 
-            Student sv2 = new Student();
-            sv2.Id = 2;
-            sv2.Name = "Vo Thi Quynh Duyen";
-            danhsachsinhvien.Add(sv2);
+                Console.Write($"Nhap ID sinh vien {i + 1}: ");
+                sv.Id = int.Parse(Console.ReadLine());
 
-            Student sv3 = new Student();
-            sv3.Id = 3;
-            sv3.Name = "Nguyen Van A";
-            danhsachsinhvien.Add(sv3);
+                Console.Write($"Nhap ten sinh vien {i + 1}: ");
+                sv.Name = Console.ReadLine();
+
+                danhsachsinhvien.Add(sv);
+            }
             Console.Write("Nhap ten sinh vien can tim: ");
             string tenCanTim = Console.ReadLine();
-            bool daTimThay = false;
+
             foreach (Student sv in danhsachsinhvien)
             {
-                if(sv.Name.ToLower().Contains(tenCanTim.ToLower()))
+                if (sv.Name.ToLower() == tenCanTim.ToLower())
                 {
-                    Console.WriteLine("Ma sv: " + sv.Id + " Ho ten: " + sv.Name);
-                    daTimThay = true;
-                }    
-
+                    Console.WriteLine($"ID: {sv.Id} - Ten: {sv.Name}");
+                   
+                }
             }
-            if (daTimThay == false)
-            {
-                Console.WriteLine("khong tim thay ");
-            }
-
+           
 
         }
     }
