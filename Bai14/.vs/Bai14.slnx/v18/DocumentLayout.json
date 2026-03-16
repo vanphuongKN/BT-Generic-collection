@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\C#\\BT-Generic-collection\\Bai14\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{309483EA-31B5-400A-9CC5-B18F058839ED}|Bai14\\Bai14.csproj|d:\\c#\\bt-generic-collection\\bai14\\bai14\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{309483EA-31B5-400A-9CC5-B18F058839ED}|Bai14\\Bai14.csproj|solutionrelative:bai14\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74579B70-7535-2CDF-012E-527A3271CE25}|Bai14\\Bai14.csproj|d:\\c#\\bt-generic-collection\\bai14\\bai14\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74579B70-7535-2CDF-012E-527A3271CE25}|Bai14\\Bai14.csproj|solutionrelative:bai14\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,7 +24,7 @@
               "RelativeDocumentMoniker": "Bai14\\Program.cs",
               "ToolTip": "D:\\C#\\BT-Generic-collection\\Bai14\\Bai14\\Program.cs",
               "RelativeToolTip": "Bai14\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowCkAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAowCAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T18:09:13.764Z",
               "EditorCaption": ""

@@ -12,34 +12,38 @@
             Console.WriteLine("MSV: 2415053122230");
             Console.WriteLine("Vo Van Phuong");
 
+            Console.Write("Nhap so sinh vien: ");
+            int n = int.Parse(Console.ReadLine());
+
             List<Student> danhSachSinhVien = new List<Student>();
-            danhSachSinhVien.Add(new Student { Id = 1, Name = "Vo Van Phuong" });
-            danhSachSinhVien.Add(new Student { Id = 2, Name = "Vo Thi Quynh Duyen" });
-            danhSachSinhVien.Add(new Student { Id = 3, Name = "Vo Thi Ngoc Han" });
+            for (int i = 0; i < n; i++)
+            {
+                Student sv = new Student();
+
+                Console.Write($"Nhap ID sinh vien {i + 1}: ");
+                sv.Id = int.Parse(Console.ReadLine());
+
+                Console.Write($"Nhap ten sinh vien {i + 1}: ");
+                sv.Name = Console.ReadLine();
+
+                danhSachSinhVien.Add(sv);
+            }
 
             Console.Write("Nhap ID sinh vien can xoa: ");
             int idCanXoa = int.Parse(Console.ReadLine());
             Student sinhVienCanXoa = null;
-            foreach (Student sv in danhSachSinhVien)
+            for (int i = 0; i < danhSachSinhVien.Count; i++)
             {
-                if (sv.Id == idCanXoa)
+                if (danhSachSinhVien[i].Id == idCanXoa)
                 {
-                    sinhVienCanXoa = sv; 
+                    danhSachSinhVien.RemoveAt(i);
                     break;
                 }
             }
-            if (sinhVienCanXoa != null)
-            {
-                danhSachSinhVien.Remove(sinhVienCanXoa); 
-                Console.WriteLine("Da xoa thanh cong sinh vien co ID: " + idCanXoa);
-            }
-            else
-            {
-                Console.WriteLine("Khong tim thay sinh vien nao co ID la: " + idCanXoa);
-            }
+            Console.WriteLine("Danh sach sinh vien sau khi xoa:");
             foreach (Student sv in danhSachSinhVien)
             {
-                Console.WriteLine("Ma SV: " + sv.Id + "  Ho ten: " + sv.Name);
+                Console.WriteLine($"ID: {sv.Id} - Ten: {sv.Name}");
             }
         }
     }
