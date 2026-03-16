@@ -1,0 +1,15 @@
+D:\C#\BT-Generic-collection\Bai7\Bai7\bin\Debug\net10.0\Bai7.exe
+D:\C#\BT-Generic-collection\Bai7\Bai7\bin\Debug\net10.0\Bai7.deps.json
+D:\C#\BT-Generic-collection\Bai7\Bai7\bin\Debug\net10.0\Bai7.runtimeconfig.json
+D:\C#\BT-Generic-collection\Bai7\Bai7\bin\Debug\net10.0\Bai7.dll
+D:\C#\BT-Generic-collection\Bai7\Bai7\bin\Debug\net10.0\Bai7.pdb
+D:\C#\BT-Generic-collection\Bai7\Bai7\obj\Debug\net10.0\Bai7.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\BT-Generic-collection\Bai7\Bai7\obj\Debug\net10.0\Bai7.AssemblyInfoInputs.cache
+D:\C#\BT-Generic-collection\Bai7\Bai7\obj\Debug\net10.0\Bai7.AssemblyInfo.cs
+D:\C#\BT-Generic-collection\Bai7\Bai7\obj\Debug\net10.0\Bai7.csproj.CoreCompileInputs.cache
+D:\C#\BT-Generic-collection\Bai7\Bai7\obj\Debug\net10.0\Bai7.sourcelink.json
+D:\C#\BT-Generic-collection\Bai7\Bai7\obj\Debug\net10.0\Bai7.dll
+D:\C#\BT-Generic-collection\Bai7\Bai7\obj\Debug\net10.0\refint\Bai7.dll
+D:\C#\BT-Generic-collection\Bai7\Bai7\obj\Debug\net10.0\Bai7.pdb
+D:\C#\BT-Generic-collection\Bai7\Bai7\obj\Debug\net10.0\Bai7.genruntimeconfig.cache
+D:\C#\BT-Generic-collection\Bai7\Bai7\obj\Debug\net10.0\ref\Bai7.dll
