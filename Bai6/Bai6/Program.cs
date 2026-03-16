@@ -1,4 +1,6 @@
-﻿namespace Bai6
+﻿
+
+namespace Bai6
 {
     internal class Program
     {
@@ -8,16 +10,25 @@
             Console.WriteLine("Vo Van Phuong");
 
             List<string> traiCay = new List<string> { "Dao", "Chuoi", "Cam", "Xoai", "Man" };
-            Console.Write("Nhap ten loai trai cay ban muon tim: ");
+
+            Console.Write("Nhập tên loại trái cây bạn muốn tìm: ");
             string timKiem = Console.ReadLine();
-            if (traiCay.Contains(timKiem))
+
+            bool timThay = false;
+
+            foreach (string item in traiCay)
             {
-                Console.WriteLine($"trai '{timKiem}' co trong danh sach.");
+                if (item.Equals(timKiem, StringComparison.OrdinalIgnoreCase))
+                {
+                    timThay = true;
+                    break;
+                }
             }
+
+            if (timThay)
+                Console.WriteLine($"Trái '{timKiem}' có trong danh sách.");
             else
-            {
-                Console.WriteLine($"trai '{timKiem}' khong co trong danh sach.");
-            }
+                Console.WriteLine($"Trái '{timKiem}' không có trong danh sách.");
         }
     }
 }
