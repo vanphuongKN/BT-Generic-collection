@@ -12,18 +12,23 @@
             Console.WriteLine("MSV: 2415053122230");
             Console.WriteLine("Vo Van Phuong");
 
+            Console.Write("Nhap so sinh vien: ");
+            int n = int.Parse(Console.ReadLine());
+
             List<Student> danhSachSinhVien = new List<Student>();
 
-            Student sv1 = new Student();
-            sv1.Id = 1;
-            sv1.Name = "Vo Van Phuong";
-            danhSachSinhVien.Add(sv1);
+            for (int i = 0; i < n; i++)
+            {
+                Student sv = new Student();
 
-            Student sv2 = new Student();
-            sv2.Id = 2;
-            sv2.Name = "Vo Thi Quynh Duyen";
-            danhSachSinhVien.Add(sv2);
+                Console.Write($"Nhap ID sinh vien {i + 1}: ");
+                sv.Id = int.Parse(Console.ReadLine());
 
+                Console.Write($"Nhap ten sinh vien {i + 1}: ");
+                sv.Name = Console.ReadLine();
+
+                danhSachSinhVien.Add(sv);
+            }
             int tongSoSinhVien = danhSachSinhVien.Count;
             Console.WriteLine("Tong so sinh vien trong danh sach la: " + tongSoSinhVien);
         }
