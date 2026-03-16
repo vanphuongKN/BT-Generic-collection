@@ -7,17 +7,32 @@
             Console.WriteLine("MSV: 2415053122230");
             Console.WriteLine("Vo Van Phuong");
 
-            List<int> danhSach = new List<int> { 45, 12, 56, 8, 23, 99 };
-            int soNhoNhat = danhSach[0];
-            for (int i = 1; i < danhSach.Count; i++)
+            Console.Write("Nhap n: ");
+            int n;
+            while (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
             {
-                int soHienTai = danhSach[i];
-                if(soHienTai <  soNhoNhat)
-                    soNhoNhat = soHienTai;
-
+                Console.Write("Nhap so nguyen hop le: ");
             }
-            Console.WriteLine("gia tri nho nhat trong danh sach: " + soNhoNhat);
 
+            List<int> danhsach = new List<int>();
+
+            Console.WriteLine("Nhap cac so:");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write($"Nhap so thu {i + 1}: ");
+                int so = int.Parse(Console.ReadLine());
+                danhsach.Add(so);
+            }
+            int min = danhsach[0];
+
+            for (int i = 1; i < danhsach.Count; i++)
+            {
+                if (danhsach[i] < min)
+                {
+                    min = danhsach[i];
+                }
+            }
+            Console.WriteLine("Gia tri nho nhat trong danh sach: " + min);
         }
     }
 }
