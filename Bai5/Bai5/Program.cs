@@ -1,34 +1,57 @@
-﻿namespace Bai5
+﻿
+
+namespace Bai5
 {
     internal class Program
     {
-        static void indanhsach(List<string> list)
+        static void InDanhSach(List<string> list)
         {
-            if (list.Count == 0) 
-                Console.WriteLine("(Danh sach trong)");
-            foreach (var item in list)
+            if (list.Count == 0)
+            {
+                Console.WriteLine("(Danh sách trống)");
+                return;
+            }
+
+            foreach (string item in list)
             {
                 Console.Write(item + " ");
             }
             Console.WriteLine();
         }
+
         static void Main(string[] args)
         {
             Console.WriteLine("MSV: 2415053122230");
             Console.WriteLine("Vo Van Phuong");
 
-            List<string> dssinhvien = new List<string> { "phuong","Nguyen", "thien","vien"};
-            Console.Write("danh sach vien la: ");
-            indanhsach(dssinhvien);
-            Console.WriteLine("Nhap ten can xoa");
-            string tencanxoa = Console.ReadLine();
-            bool kq = dssinhvien.Remove(tencanxoa);
-            if (kq)
-                Console.WriteLine("Da xoa thanh cong " + tencanxoa);
+            List<string> dsSinhVien = new List<string> { "Phuong", "Nguyen", "Thien", "Vien" };
+
+            Console.Write("Danh sách sinh viên: ");
+            InDanhSach(dsSinhVien);
+
+            Console.Write("Nhập tên cần xóa: ");
+            string tenCanXoa = Console.ReadLine();
+
+            bool timThay = false;
+
+            for (int i = 0; i < dsSinhVien.Count; i++)
+            {
+                if (dsSinhVien[i].Equals(tenCanXoa, StringComparison.OrdinalIgnoreCase))
+                {
+                    dsSinhVien.RemoveAt(i);
+                    timThay = true;
+                    break;
+                }
+            }
+
+            if (timThay)
+                Console.WriteLine("Đã xóa thành công: " + tenCanXoa);
             else
-                Console.WriteLine("Khong tim thay ten sv:" + tencanxoa);
-            Console.Write("in lai danh sach: ");
-            indanhsach(dssinhvien);
+                Console.WriteLine("Không tìm thấy sinh viên: " + tenCanXoa);
+
+            Console.Write("Danh sách sau khi xóa: ");
+            InDanhSach(dsSinhVien);
+
             Console.ReadLine();
         }
     }
