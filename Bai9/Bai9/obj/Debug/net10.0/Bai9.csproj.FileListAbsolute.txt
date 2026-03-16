@@ -1,0 +1,15 @@
+D:\C#\BT-Generic-collection\Bai9\Bai9\obj\Debug\net10.0\Bai9.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\BT-Generic-collection\Bai9\Bai9\obj\Debug\net10.0\Bai9.AssemblyInfoInputs.cache
+D:\C#\BT-Generic-collection\Bai9\Bai9\obj\Debug\net10.0\Bai9.AssemblyInfo.cs
+D:\C#\BT-Generic-collection\Bai9\Bai9\obj\Debug\net10.0\Bai9.csproj.CoreCompileInputs.cache
+D:\C#\BT-Generic-collection\Bai9\Bai9\obj\Debug\net10.0\Bai9.sourcelink.json
+D:\C#\BT-Generic-collection\Bai9\Bai9\bin\Debug\net10.0\Bai9.exe
+D:\C#\BT-Generic-collection\Bai9\Bai9\bin\Debug\net10.0\Bai9.deps.json
+D:\C#\BT-Generic-collection\Bai9\Bai9\bin\Debug\net10.0\Bai9.runtimeconfig.json
+D:\C#\BT-Generic-collection\Bai9\Bai9\bin\Debug\net10.0\Bai9.dll
+D:\C#\BT-Generic-collection\Bai9\Bai9\bin\Debug\net10.0\Bai9.pdb
+D:\C#\BT-Generic-collection\Bai9\Bai9\obj\Debug\net10.0\Bai9.dll
+D:\C#\BT-Generic-collection\Bai9\Bai9\obj\Debug\net10.0\refint\Bai9.dll
+D:\C#\BT-Generic-collection\Bai9\Bai9\obj\Debug\net10.0\Bai9.pdb
+D:\C#\BT-Generic-collection\Bai9\Bai9\obj\Debug\net10.0\Bai9.genruntimeconfig.cache
+D:\C#\BT-Generic-collection\Bai9\Bai9\obj\Debug\net10.0\ref\Bai9.dll
