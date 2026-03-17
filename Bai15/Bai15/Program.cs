@@ -1,27 +1,37 @@
-﻿
-namespace Bai15
+﻿namespace Bai15
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> tudien = new Dictionary<string, string>();
+            Console.WriteLine("MSV: 2415053122230");
+            Console.WriteLine("Vo Van Phuong"); 
 
-            tudien.Add("hello", "xin chao");
-            tudien.Add("book", "quyen sach");
-            tudien.Add("computer", "may tinh");
-            tudien.Add("school", "truong hoc");
-
-            Console.Write("Nhap tu tieng Anh can tra: ");
-            string tu = Console.ReadLine().ToLower();
-
-            if (tudien.ContainsKey(tu))
+            var tudien = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
             {
-                Console.WriteLine("Nghia tieng Viet: " + tudien[tu]);
-            }
-            else
+                {"hello", "xin chao"},
+                {"book", "quyen sach"},
+                {"computer", "may tinh"},
+                {"school", "truong hoc"}
+            };
+
+            while (true)
             {
-                Console.WriteLine("Khong tim thay tu nay trong tu dien");
+                Console.Write("Nhap tu: ");
+                string tu = Console.ReadLine()?.Trim();
+
+                if (string.IsNullOrEmpty(tu))
+                {
+                    Console.WriteLine("Ban chua nhap tu!");
+                    continue;
+                }
+
+                if (tu.ToLower() == "exit") break;
+
+                if (tudien.TryGetValue(tu, out string nghia))
+                    Console.WriteLine($"=> {nghia}");
+                else
+                    Console.WriteLine("Khong tim thay!");
             }
         }
     }
