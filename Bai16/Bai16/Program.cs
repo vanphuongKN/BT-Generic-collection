@@ -1,5 +1,4 @@
-﻿
-namespace Bai16
+﻿namespace Bai16
 {
     internal class Program
     {
@@ -11,25 +10,26 @@ namespace Bai16
             Console.Write("Nhap chuoi: ");
             string chuoi = Console.ReadLine();
 
+            if (string.IsNullOrEmpty(chuoi))
+            {
+                Console.WriteLine("Chuoi rong!");
+                return;
+            }
+
             Dictionary<char, int> demKyTu = new Dictionary<char, int>();
 
             foreach (char c in chuoi)
             {
-                if (demKyTu.ContainsKey(c))
-                {
-                    demKyTu[c]++;
-                }
-                else
-                {
-                    demKyTu.Add(c, 1);
-                }
+                if (char.IsWhiteSpace(c)) continue;
+
+                demKyTu[c] = demKyTu.ContainsKey(c) ? demKyTu[c] + 1 : 1;
             }
 
             Console.WriteLine("So lan xuat hien cua tung ky tu:");
 
-            foreach (KeyValuePair<char, int> item in demKyTu)
+            foreach (var item in demKyTu)
             {
-                Console.WriteLine(item.Key + " : " + item.Value);
+                Console.WriteLine($"{item.Key} : {item.Value}");
             }
         }
     }
