@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
 
 namespace Bai18
 {
@@ -15,8 +16,12 @@ namespace Bai18
             Console.WriteLine("MSV: 2415053122230");
             Console.WriteLine("Vo Van Phuong");
 
+            int n;
             Console.Write("Nhap so sinh vien: ");
-            int n = int.Parse(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
+            {
+                Console.Write("Nhap so hop le: ");
+            }
 
             List<Student> danhsach = new List<Student>();
 
@@ -28,7 +33,10 @@ namespace Bai18
                 sv.Name = Console.ReadLine();
 
                 Console.Write($"Nhap diem sinh vien {i + 1}: ");
-                sv.Score = double.Parse(Console.ReadLine());
+                while (!double.TryParse(Console.ReadLine(), out sv.Score))
+                {
+                    Console.Write("Nhap diem hop le: ");
+                }
 
                 danhsach.Add(sv);
             }
