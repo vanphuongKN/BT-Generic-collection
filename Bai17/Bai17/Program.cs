@@ -1,4 +1,6 @@
-﻿namespace Bai17
+﻿
+
+namespace Bai17
 {
     internal class Program
     {
@@ -7,15 +9,23 @@
             Console.WriteLine("MSV: 2415053122230");
             Console.WriteLine("Vo Van Phuong");
 
+            int n;
             Console.Write("Nhap n: ");
-            int n = int.Parse(Console.ReadLine());
+            while (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
+            {
+                Console.Write("Nhap so hop le: ");
+            }
 
             List<int> danhsach = new List<int>();
 
             for (int i = 0; i < n; i++)
             {
+                int so;
                 Console.Write($"Nhap so thu {i + 1}: ");
-                int so = int.Parse(Console.ReadLine());
+                while (!int.TryParse(Console.ReadLine(), out so))
+                {
+                    Console.Write("Nhap so hop le: ");
+                }
                 danhsach.Add(so);
             }
 
@@ -26,24 +36,22 @@
                 if (dem.ContainsKey(so))
                     dem[so]++;
                 else
-                    dem.Add(so, 1);
+                    dem[so] = 1;
             }
 
-            int soXuatHienNhieuNhat = 0;
-            int max = 0;
+            int soMax = danhsach[0];
+            int maxLan = dem[soMax];
 
-            foreach (KeyValuePair<int, int> item in dem)
+            foreach (var item in dem)
             {
-                if (item.Value > max)
+                if (item.Value > maxLan)
                 {
-                    max = item.Value;
-                    soXuatHienNhieuNhat = item.Key;
+                    maxLan = item.Value;
+                    soMax = item.Key;
                 }
             }
 
-            Console.WriteLine($"So xuat hien nhieu nhat: {soXuatHienNhieuNhat} ({max} lan)");
+            Console.WriteLine($"So xuat hien nhieu nhat: {soMax} ({maxLan} lan)");
         }
-
-    
     }
 }
